@@ -21,6 +21,11 @@ For years, I've been on the quest for a tool capable of seamlessly interconnecti
 - **User-Friendly Interface**: A straightforward configuration format that abstracts away the complexity of API integration.
 - **Python-Powered**: Built with Python, ensuring ease of use for developers familiar with the language and promoting community contributions.
 
+##Further Enhancements
+- **Dynamic Date Handling**: Integrate functionality to automatically update the last_modified date whenever the configuration is changed.
+- **Configuration Management**: Implement a system to manage multiple configurations, potentially storing them in a database like MongoDB or PostgreSQL with appropriate timestamps and retrieval mechanisms.
+- **Advanced Templating**: Extend the templating system to handle more complex data extraction and manipulation from API responses, possibly using a more sophisticated templating engine or custom parsing logic.
+
 ## Getting Started
 
 ### Prerequisites
