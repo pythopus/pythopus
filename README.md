@@ -163,11 +163,5 @@ Thanks to all the contributors who have helped shape Pytopus.
 Inspired by the flexibility and capability of both the Python programming language and the adaptability of octopuses.
 For more information, visit our GitHub repository or contact the project maintainers.
 
-@floriangrousset
-@antonyjaen
-
-```
-Feel free to adjust the content to fit the specifics of your project, such as installation instructions, configuration details, and links to the repository. This template aims to provide a solid starting point for documenting your project and guiding potential users and contributors.
-```
-
-
+[@floriangrousset](https://github.com/floriangrousset) ~ Project lead
+<br/>[@antonyjaen](https://github.com/antonyjaen) ~ Project co-lead
