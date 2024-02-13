@@ -35,6 +35,13 @@ services:
       - "5672:5672" # AMQP protocol
       - "15672:15672" # management interface
 
+  mongodb:
+    image: mongo
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - "27017:27017"
+
   postgres:
     image: postgres
     volumes:
@@ -79,3 +86,4 @@ services:
 
 volumes:
   postgres_data:
+  mongo_data:
