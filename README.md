@@ -7,11 +7,9 @@ Pytopus, your ultimate python octopus pet companion!
 
 This project is about connecting APIs together.
 
-The name comes from the cros of Python and Octopus as it's like a gigantic Octopus connecting APIs together using Python.
-
 ## Why am I building this
 
-After looking for years for a tool which can help me interconnect output of APIs to input of others, I've always been left sad with the tools I found. Either they are too complicated to use and features are overwealming, or they are too simple and not useful. That's why I decided to start building my own API Octopus in Python.
+For years, I've been looking for a tool which can help me interconnect output of APIs to input of others. Unfortunately, I've always been left sad with the tools and solutions I found. Either they were too complicated to use because of overwealming useless features, or they are too simple and missing part of the need. Anyhow, that's why I decided to start building my own API Octopus in Python. The name comes from the cross of the words Python and Octopus as it acts like a gigantic Octopus connecting APIs together using Python language.
 
 ## How to build
 ```bash
