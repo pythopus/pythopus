@@ -1,5 +1,6 @@
 import requests
 import json
+from datetime import datetime
 
 def load_config(file_path):
     with open(file_path, 'r') as file:
@@ -26,11 +27,14 @@ def execute_api_call(call_config, prev_responses):
 
 def main(config_path):
     config = load_config(config_path)
+    print(f"Executing chain ID: {config['id']}, Name: {config['name']}")
+    print(f"Created: {config['created']}, Last Modified: {config['last_modified']}")
+    
     api_chain = config.get("api_chain", [])
     responses = {}
 
     for api_call in api_chain:
-        response = execute_api_call(api_call, responses.get(api_call['name']))
+        response = execute_api_call(api_call, responses.get(api_call['name'], {}))
         responses[api_call['name']] = response
         print(f"Response from {api_call['name']}: {response}")
 
