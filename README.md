@@ -73,6 +73,10 @@ For years, I've been on the quest for a tool capable of seamlessly interconnecti
         ]
     }
     ```
+3. Visual representation of the configuration:
+
+   ![image](https://github.com/pytopus/pytopus-engine/assets/2507085/2a85d013-4928-40e0-8fee-749ce2ced125)
+
 ## Running Pytopus
 
 Execute Pytopus by running:
