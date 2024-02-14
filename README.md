@@ -1,29 +1,93 @@
 ![image](https://github.com/pytopus/pytopus/assets/2507085/b72b3617-2922-4620-a41b-02a31d6a5cb0)
 
 # pytopus
-Pytopus, your ultimate python octopus pet companion!
+
+Unleashing the Power of API Integration with the Flexibility of Python!
 
 ## What is it?
 
-This project is about connecting APIs together.
-
-The name comes from the cros of Python and Octopus as it's like a gigantic Octopus connecting APIs together using Python.
+Pytopus is a sophisticated API Orchestrator designed to streamline the integration and management of multiple API services. By enabling the creation of configurable chains, it seamlessly orchestrates the flow of data between APIs, facilitating the efficient handling of inputs and outputs in a cascading manner. This approach not only simplifies complex API interactions but also enhances the automation and scalability of interconnected systems, making it an invaluable tool for developers looking to optimize their digital infrastructure.
 
 ## Why am I building this
 
-After looking for years for a tool which can help me interconnect output of APIs to input of others, I've always been left sad with the tools I found. Either they are too complicated to use and features are overwealming, or they are too simple and not useful. That's why I decided to start building my own API Octopus in Python.
+For years, I've been on the quest for a tool capable of seamlessly interconnecting the output of one API to the input of another. Unfortunately, my search often ended in disappointment. The tools and solutions I encountered were either overwhelmingly complex, cluttered with superfluous features, or disappointingly simplistic, lacking essential functionalities. Driven by these frustrations, I embarked on a journey to create my own solution. Thus, Pytopus was born—a name that marries 'Python' with 'Octopus', symbolizing its ability to adeptly link APIs together through the power of the Python language, much like an octopus connects its tentacles.
 
-## How to build
-```bash
-docker ...
-```
-blah blah blah ...
 
-## How to run
+## Features
+
+- **Configurable API Chains**: Define and execute sequences of API calls, managing the flow of data from one service to another.
+- **Dynamic Data Mapping**: Automate the mapping of output from one API as input to another, reducing manual coding and potential errors.
+- **Extensible Connector Library**: Leverage a growing library of API connectors or easily add your own to integrate with various services.
+- **User-Friendly Interface**: A straightforward configuration format that abstracts away the complexity of API integration.
+- **Python-Powered**: Built with Python, ensuring ease of use for developers familiar with the language and promoting community contributions.
+
+##Further Enhancements
+- **Dynamic Date Handling**: Integrate functionality to automatically update the last_modified date whenever the configuration is changed.
+- **Configuration Management**: Implement a system to manage multiple configurations, potentially storing them in a database like MongoDB or PostgreSQL with appropriate timestamps and retrieval mechanisms.
+- **Advanced Templating**: Extend the templating system to handle more complex data extraction and manipulation from API responses, possibly using a more sophisticated templating engine or custom parsing logic.
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.6 or later
+- `requests` library
+
+### Installation
+
+1. Clone the Pytopus repository:
+   ```bash
+   git clone https://github.com/pytopus/pytopus-engine.git
+   ```
+2. Navigate to the Pytopus directory:
+    ```bash
+    cd pytopus
+    ```
+3.Install the required Python packages:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+### Configuration
+
+1. Create a `config.json` file in the root directory with your API chain configuration. Refer to the Configuration Guide for details.
+
+2. Example config.json:
+
+    ```json
+    {
+        "id": 0,
+        "name": "Get User Posts Chain",
+        "api_chain": [
+            {
+                "name": "GetUser",
+                "method": "GET",
+                "url": "https://jsonplaceholder.typicode.com/users/1"
+            },
+            {
+                "name": "GetPosts",
+                "method": "GET",
+                "url": "https://jsonplaceholder.typicode.com/posts",
+                "query_params": {"userId": "{{GetUser.id}}"}
+            }
+        ]
+    }
+    ```
+3. Visual representation of the configuration:
+
+   ![image](https://github.com/pytopus/pytopus-engine/assets/2507085/2a85d013-4928-40e0-8fee-749ce2ced125)
+
+## Running Pytopus
+
+Execute Pytopus by running:
+
 ```bash
-docker ...
+python pytopus-engine.py
 ```
-blah blah blah ...
+
+## Configuration Guide
+
+Detailed information on configuring your API chains, including examples and parameter explanations, can be found [here](future-link).
 
 ## Architecture
 
@@ -88,5 +152,16 @@ Let's outline each component and its role in our architecture:
     - Prometheus & Grafana for monitoring and visualization: Track application performance and metrics.
     - Graylog for centralized logging: Aggregate logs for operational insights and troubleshooting.
 
-## History
+## Contributing
+We welcome contributions from the community! If you'd like to contribute, please follow our Contributing Guidelines.
 
+## License
+Pytopus is licensed under the GNU Affero General Public License Version 3. See the LICENSE file for more details.
+
+## Acknowledgments and Credits
+Thanks to all the contributors who have helped shape Pytopus.
+Inspired by the flexibility and capability of both the Python programming language and the adaptability of octopuses.
+For more information, visit our GitHub repository or contact the project maintainers.
+
+[@floriangrousset](https://github.com/floriangrousset) ~ Project lead
+<br/>[@antonyjaen](https://github.com/antonyjaen) ~ Project co-lead
