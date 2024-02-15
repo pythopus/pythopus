@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Hello, Pytopus!'
+    return 'Hello, Pythopus!'
 
 @app.route('/')
 def html_endpoint():
@@ -12,7 +12,7 @@ def html_endpoint():
 
 @app.route('/api')
 def json_endpoint():
-    data = {'message': 'Hello, Pytopus!'}
+    data = {'message': 'Hello, Pythopus!'}
     return jsonify(data)
 
 if __name__ == '__main__':
