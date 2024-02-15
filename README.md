@@ -1,16 +1,16 @@
-![image](https://github.com/pytopus/pytopus/assets/2507085/b72b3617-2922-4620-a41b-02a31d6a5cb0)
+![image](https://github.com/pythopus/pythopus/assets/2507085/b72b3617-2922-4620-a41b-02a31d6a5cb0)
 
-# pytopus
+# Pythopus
 
 Unleashing the Power of API Integration with the Flexibility of Python!
 
 ## What is it?
 
-Pytopus is a sophisticated API Orchestrator designed to streamline the integration and management of multiple API services. By enabling the creation of configurable chains, it seamlessly orchestrates the flow of data between APIs, facilitating the efficient handling of inputs and outputs in a cascading manner. This approach not only simplifies complex API interactions but also enhances the automation and scalability of interconnected systems, making it an invaluable tool for developers looking to optimize their digital infrastructure.
+Pythopus is a sophisticated API Orchestrator designed to streamline the integration and management of multiple API services. By enabling the creation of configurable chains, it seamlessly orchestrates the flow of data between APIs, facilitating the efficient handling of inputs and outputs in a cascading manner. This approach not only simplifies complex API interactions but also enhances the automation and scalability of interconnected systems, making it an invaluable tool for developers looking to optimize their digital infrastructure.
 
 ## Why am I building this
 
-For years, I've been on the quest for a tool capable of seamlessly interconnecting the output of one API to the input of another. Unfortunately, my search often ended in disappointment. The tools and solutions I encountered were either overwhelmingly complex, cluttered with superfluous features, or disappointingly simplistic, lacking essential functionalities. Driven by these frustrations, I embarked on a journey to create my own solution. Thus, Pytopus was born—a name that marries 'Python' with 'Octopus', symbolizing its ability to adeptly link APIs together through the power of the Python language, much like an octopus connects its tentacles.
+For years, I've been on the quest for a tool capable of seamlessly interconnecting the output of one API to the input of another. Unfortunately, my search often ended in disappointment. The tools and solutions I encountered were either overwhelmingly complex, cluttered with superfluous features, or disappointingly simplistic, lacking essential functionalities. Driven by these frustrations, I embarked on a journey to create my own solution. Thus, Pythopus was born—a name that marries 'Python' with 'Octopus', symbolizing its ability to adeptly link APIs together through the power of the Python language, much like an octopus connects its tentacles.
 
 
 ## Features
@@ -35,13 +35,13 @@ For years, I've been on the quest for a tool capable of seamlessly interconnecti
 
 ### Installation
 
-1. Clone the Pytopus repository:
+1. Clone the Pythopus repository:
    ```bash
-   git clone https://github.com/pytopus/pytopus-engine.git
+   git clone https://github.com/pythpus/pythopus.git
    ```
-2. Navigate to the Pytopus directory:
+2. Navigate to the Pythopus directory:
     ```bash
-    cd pytopus
+    cd pythopus
     ```
 3.Install the required Python packages:
     ```bash
@@ -75,14 +75,14 @@ For years, I've been on the quest for a tool capable of seamlessly interconnecti
     ```
 3. Visual representation of the configuration:
 
-   ![image](https://github.com/pytopus/pytopus-engine/assets/2507085/2a85d013-4928-40e0-8fee-749ce2ced125)
+   ![image](https://github.com/pythopus/pythopus/assets/2507085/2a85d013-4928-40e0-8fee-749ce2ced125)
 
-## Running Pytopus
+## Running Pythopus
 
-Execute Pytopus by running:
+Execute Pythopus by running:
 
 ```bash
-python pytopus-engine.py
+python pythopus.py
 ```
 
 ## Configuration Guide
@@ -92,7 +92,7 @@ Detailed information on configuring your API chains, including examples and para
 ## Architecture
 
 ### High level View
-The design of Pytopus platform follows an industry-grade architecture that includes a modern frontend, an API built with Flask (Python), caching, a backend queue system, a modern data store, and search engine capabilities.
+The design of Pythopus platform follows an industry-grade architecture that includes a modern frontend, an API built with Flask (Python), caching, a backend queue system, a modern data store, and search engine capabilities.
 
 -==[ INSERT HERE ARCHITECTURE DIAGRAM ]==-
 
@@ -156,10 +156,10 @@ Let's outline each component and its role in our architecture:
 We welcome contributions from the community! If you'd like to contribute, please follow our Contributing Guidelines.
 
 ## License
-Pytopus is licensed under the GNU Affero General Public License Version 3. See the LICENSE file for more details.
+Pythopus is licensed under the GNU Affero General Public License Version 3. See the LICENSE file for more details.
 
 ## Acknowledgments and Credits
-Thanks to all the contributors who have helped shape Pytopus.
+Thanks to all the contributors who have helped shape Pythopus.
 Inspired by the flexibility and capability of both the Python programming language and the adaptability of octopuses.
 For more information, visit our GitHub repository or contact the project maintainers.
 
