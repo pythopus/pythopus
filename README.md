@@ -1,4 +1,4 @@
-![image](https://github.com/pythopus/pythopus/assets/2507085/b72b3617-2922-4620-a41b-02a31d6a5cb0)
+![Pythopus](https://github.com/pythopus/pythopus/assets/2507085/8b20e957-9637-43a4-a45d-c3475c9a2215)
 
 # Pythopus
 
