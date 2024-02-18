@@ -50,32 +50,75 @@ For years, I've been on the quest for a tool capable of seamlessly interconnecti
 
 ### Configuration
 
-1. Create a `config.json` file in the root directory with your API chain configuration. Refer to the Configuration Guide for details.
+1. Create a api config file `jsonplaceholder.config.json` file in /src/api_configs directory. Refer to the Configuration Guide for details.
 
-2. Example config.json:
+2. Example [api_name].config.json:
 
     ```json
     {
-        "id": 0,
-        "name": "Get User Posts Chain",
-        "api_chain": [
+        "api_name": "Example API",
+        "base_url": "https://jsonplaceholder.typicode.com",
+        "authentication": {
+            "type": "OAuth 2.0",
+            "token_url": "https://jsonplaceholder.typicode.com/oauth/token",
+            "client_id": "your_client_id",
+            "client_secret": "your_client_secret"
+        },
+        "endpoints": [
             {
-                "name": "GetUser",
+                "name": "Get Users",
                 "method": "GET",
-                "url": "https://jsonplaceholder.typicode.com/users/1"
+                "url": "/users",
+                "description": "Get the list of users",
+                "response_body": {
+                    "data":[...],
+                    "pageInfo":{}
+                }
             },
             {
-                "name": "GetPosts",
+                "name": "Create User",
+                "method": "POST",
+                "url": "/users",
+                "description": "Create a new user",
+                "request_body": {
+                    "username": "string",
+                    "password": "string",
+                    "email": "string"
+                }
+            },
+            {
+                "name": "Get User Details",
                 "method": "GET",
-                "url": "https://jsonplaceholder.typicode.com/posts",
-                "query_params": {"userId": "{{GetUser.id}}"}
+                "url": "/users/{user_id}",
+                "description": "Get details of a specific user",
+                "url_parameters": {
+                    "user_id": "string"
+                },
+                "response_body": {
+                    "data": [...],
+                    "pageInfo": {}
+                }
+            },
+            {
+                "name": "Update User",
+                "method": "PUT",
+                "url": "/users/{user_id}",
+                "description": "Update details of a user",
+                "url_parameters": {
+                    "user_id": "string"
+                },
+                "request_body": {
+                    "username": "string",
+                    "email": "string"
+                }
             }
         ]
     }
     ```
 3. Visual representation of the configuration:
 
-   ![image](https://github.com/pythopus/pythopus/assets/2507085/2a85d013-4928-40e0-8fee-749ce2ced125)
+  ![image](https://github.com/pythopus/pythopus/assets/60453790/9257efc2-e766-46ff-b361-62160825fc1a)
+
 
 ## Running Pythopus
 
