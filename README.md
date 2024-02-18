@@ -117,7 +117,8 @@ For years, I've been on the quest for a tool capable of seamlessly interconnecti
     ```
 3. Visual representation of the configuration:
 
-   ![image](https://github.com/pythopus/pythopus/assets/2507085/2a85d013-4928-40e0-8fee-749ce2ced125)
+  ![image](https://github.com/pythopus/pythopus/assets/60453790/9257efc2-e766-46ff-b361-62160825fc1a)
+
 
 ## Running Pythopus
 
