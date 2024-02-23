@@ -1,13 +1,74 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pythopus Dashboard</title>
-  </head>
-  <body>
-    <hr/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header, .footer {
+            background-color: #f3f3f3;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .footer {
+          padding: 0px;
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+        }
+        .main {
+            display: flex;
+            flex: 1;
+        }
+        .nav {
+            width: 200px;
+            background-color: #e8e8e8;
+            padding: 20px;
+            height: calc(100vh - 140px);
+            overflow-y: auto;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
     <h1>Pythopus Dashboard</h1>
-    <hr/>
-    <p>[placeholder for the control panel]</p>
-    <hr/>
-  </body>
+</div>
+
+<div class="main">
+    <div class="nav">
+        <h3>Navigation</h3>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">API Management</a></li>
+            <li><a href="#">Flow Configuration</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h2>Welcome to Pythopus</h2>
+        <p>The platform for unleashing the Power of API Integration with the Flexibility of Python!</p>
+        <!-- Additional content can be added here -->
+    </div>
+</div>
+
+<div class="footer">
+    <p>© 2024 Pythopus. All rights reserved.</p>
+</div>
+
+</body>
 </html>
