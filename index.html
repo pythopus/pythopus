@@ -6,35 +6,49 @@
     <title>Pythopus Dashboard</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Courier New', monospace;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             height: 100vh;
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* Light text */
         }
         .header, .footer {
-            background-color: #f3f3f3;
+            background-color: #1e1e1e; /* Slightly lighter dark shade for header/footer */
+            color: #ff4545; /* Red accents */
             padding: 10px 20px;
             text-align: center;
         }
         .footer {
-          padding: 0px;
-          position: fixed;
-          left: 0;
-          bottom: 0;
-          width: 100%;
+            padding: 10px 20px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
         }
         .main {
             display: flex;
             flex: 1;
         }
         .nav {
-            width: 200px;
-            background-color: #e8e8e8;
+            width: 220px;
+            background-color: #2a2a2a; /* Darker shade for nav */
             padding: 20px;
             height: calc(100vh - 140px);
             overflow-y: auto;
+        }
+        .nav ul {
+            list-style-type: square;
+            padding: 0;
+        }
+        .nav ul li a {
+            color: #ff4545; /* Red accents for links */
+            text-decoration: none;
+        }
+        .nav ul li a:hover {
+            text-decoration: underline;
         }
         .content {
             flex-grow: 1;
