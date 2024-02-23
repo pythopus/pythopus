@@ -42,73 +42,46 @@ For years, I've been looking for a tool that can effortlessly bridge the outputs
     ```
 
 ### Configuration
-1. Create a api config file, example `jsonplaceholder.config.json` file in the same directory than the application. 
+1. Create a config file named `config.json` in the same directory than the application. This file contains the complete chain configuration.
 
     ```json
     {
-        "api_name": "Example API",
-        "base_url": "https://jsonplaceholder.typicode.com",
-        "authentication": {
-            "type": "OAuth 2.0",
-            "token_url": "https://jsonplaceholder.typicode.com/oauth/token",
-            "client_id": "your_client_id",
-            "client_secret": "your_client_secret"
-        },
-        "endpoints": [
+        "id": 0,
+        "name": "Get User Posts Chain",
+        "created": "2024-02-13T00:00:00Z",
+        "last_modified": "2024-02-13T00:00:00Z",
+        "api_chain": [
             {
-                "name": "Get Users",
-                "method": "GET",
-                "url": "/users",
-                "description": "Get the list of users",
-                "response_body": {
-                    "data":[...],
-                    "pageInfo":{}
-                }
-            },
-            {
-                "name": "Create User",
+                "name": "Authenticate",
                 "method": "POST",
-                "url": "/users",
-                "description": "Create a new user",
-                "request_body": {
-                    "username": "string",
-                    "password": "string",
-                    "email": "string"
+                "url": "https://jsonplaceholder.typicode.com/oauth/token",
+                "headers": {},
+                "payload": {
+                    "client_id": "your_client_id",
+                    "client_secret": "your_client_secret",
+                    "redirect_uri": "https://jsonplaceholder.typicode.com/oauth/redirect"
                 }
             },
             {
-                "name": "Get User Details",
+                "name": "GetUser",
                 "method": "GET",
-                "url": "/users/{user_id}",
-                "description": "Get details of a specific user",
-                "url_parameters": {
-                    "user_id": "string"
-                },
-                "response_body": {
-                    "data": [...],
-                    "pageInfo": {}
-                }
+                "url": "https://jsonplaceholder.typicode.com/users/1",
+                "headers": {},
+                "query_params": {}
             },
             {
-                "name": "Update User",
-                "method": "PUT",
-                "url": "/users/{user_id}",
-                "description": "Update details of a user",
-                "url_parameters": {
-                    "user_id": "string"
-                },
-                "request_body": {
-                    "username": "string",
-                    "email": "string"
-                }
+                "name": "GetPosts",
+                "method": "GET",
+                "url": "https://jsonplaceholder.typicode.com/posts",
+                "headers": {},
+                "query_params": {"userId": "{{GetUser.id}}"}
             }
         ]
     }
     ```
 3. Visual representation of the configuration:
 
-  ![image](https://github.com/pythopus/pythopus/assets/60453790/9257efc2-e766-46ff-b361-62160825fc1a)
-
+    TODO
 
 ## Running Pythopus
 Execute Pythopus by running:
