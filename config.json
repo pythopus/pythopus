@@ -1,33 +1,50 @@
 {
-  "id": 0,
-  "name": "Get User Posts Chain",
+  "name": "WeatherBasedActivityPlanner",
   "created": "2024-02-13T00:00:00Z",
   "last_modified": "2024-02-13T00:00:00Z",
-  "api_chain": [
+  "steps": [
     {
-      "name": "Authenticate",
-      "method": "POST",
-      "url": "https://jsonplaceholder.typicode.com/oauth/token",
-      "headers": {},
-      "payload": {
-        "client_id": "your_client_id",
-        "client_secret": "your_client_secret",
-        "redirect_uri": "https://jsonplaceholder.typicode.com/oauth/redirect"
+      "step": 1,
+      "description": "Retrieve weather information",
+      "method": "GET",
+      "url": "https://api.weatherapi.com/v1/current.json",
+      "queryParams": {
+        "key": "YOUR_API_KEY",
+        "q": "London"
+      },
+      "outputMapping": {
+        "temperature": "current.temp_c",
+        "condition": "current.condition.text"
       }
     },
     {
-      "name": "GetUser",
-      "method": "GET",
-      "url": "https://jsonplaceholder.typicode.com/users/1",
-      "headers": {},
-      "query_params": {}
+      "step": 2,
+      "description": "Get activity recommendations based on weather",
+      "method": "POST",
+      "url": "https://api.activityrecommendation.com/recommend",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "temperature": "{{steps[1].output.temperature}}",
+        "weatherCondition": "{{steps[1].output.condition}}"
+      },
+      "outputMapping": {
+        "activities": "recommendedActivities"
+      }
     },
     {
-      "name": "GetPosts",
-      "method": "GET",
-      "url": "https://jsonplaceholder.typicode.com/posts",
-      "headers": {},
-      "query_params": {"userId": "{{GetUser.id}}"}
+      "step": 3,
+      "description": "Schedule activities",
+      "method": "POST",
+      "url": "https://api.eventscheduler.com/schedule",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "date": "2024-02-25",
+        "activities": "{{steps[2].output.activities}}"
+      }
     }
   ]
 }
